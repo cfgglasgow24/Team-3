@@ -1,0 +1,32 @@
+{
+    "a": {
+        "asset": "../assets/A.png",
+        "description": "Make an A",
+        "button_number": "1",
+        "explanation": "Touch the end of the recipient's thumb with the giver's right forefinger."
+    },
+    "e": {
+        "asset": "../assets/E.png",
+        "description": "Make an E",
+        "button_number": "2",
+        "explanation": "Touch the end of the recipient's forefinger with the giver's right forefinger."
+    },
+    "i": {
+        "asset": "../assets/I.png",
+        "description": "Make an I",
+        "button_number": "3",
+        "explanation": "Giver uses right forefinger to touch middle finger of recipient's left hand."
+    },
+    "o": {
+        "asset": "../assets/O.png",
+        "description": "Make an O",
+        "button_number": "4",
+        "explanation": "Giver uses the right forefinger to touch ring finger on the recipient's left hand."
+    },
+    "u": {
+        "asset": "../assets/U.png",
+        "description": "Make a U",
+        "button_number": "5",
+        "explanation": "Giver's right forefinger touches the recipient's small finger."
+    }
+}
