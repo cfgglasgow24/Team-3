@@ -3,7 +3,7 @@
     <head>
         <title>Deafblind Scotland| Options</title>
         <link rel="icon" href="assets/favicon.ico" type="image/ico" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
 
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, height=device-height" />
@@ -21,10 +21,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="landingStyle.css">
+        <script src="landingScript.js"></script>
     </head>
 
     <body>
-        <h1>Hi</h1>
-        <p>Page</p>
+        <div id = "text">
+            <h1> HelpingHand</h1>
+            <p>Welcome to HelpingHand, your interactive tool for helping you learn to communicate with 
+                the DeafBlind individuals in your community. What accessibility features would you like to implement? 
+            </p>
+            
+            <!-- oninput="increaseBodyFontSize(20)"-->
+
+            <div class="landingPageButtons">
+                <button class = "sizeButton" id = "Large" onclick="document.getElementById('text').style.fontSize='3.0em';"> Large </button>
+                <button class = "sizeButton" id="Medium" onclick="document.getElementById('text').style.fontSize='2.0em';document.getElementById('landingPageButtons').style.height = '2.0em';"> Medium</button>
+                <button class = "sizeButton" id = "Large" onclick="document.getElementById('text').style.fontSize='1.0em';document.getElementById('landingPageButtons').style.height = '1.0em';"> Standard </button>
+            </div>
+        </div>
     </body>
 </html>
