@@ -122,32 +122,23 @@
         <p>...</p>
 
         <h2 id="test">Try it yourself</h2>
-        <div class="primary-line"></div>
 
-        
-            <h3>Question</h3>
-            <p>What letter is this?</p>
-            <img src="assets/A.png" alt="Letter A Preview">
+        <div class="form-section">
+            <h3>Answer the Question!</h3>
+        <img src="{{ question.asset }}" alt="Question Image">
 
-            <form>
-                <h1>Figer</h1>
-                <label class="container">Index
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-                </label>
-                <label class="container">2
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                </label>
-                <label class="container">Three
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                </label>
-                <label class="container">Four
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                </label>
-            </form>
+        <p>{{ question.description }}</p>
+
+        <form action="/check_answer" method="POST">
+            <input type="hidden" name="question" value="{{ question.letter }}">
+            <button type="submit" name="answer" value="1">Thumb</button>
+            <button type="submit" name="answer" value="2">Index</button>
+            <button type="submit" name="answer" value="3">Middle</button>
+            <button type="submit" name="answer" value="4">Ring</button>
+            <button type="submit" name="answer" value="5">Little</button>
+        </form>
+        <p>{{ message }}</p>
+    </div>
 
     </div>
 

@@ -36,9 +36,10 @@ h2, h3, p, .top-section a{
     font-size: 2em;
 }
 
-form {
+.form-section {
     padding: 1em;
-    border-radius: 50%;
+    border-style: solid;
+    border-radius: 1em;
 }
 .secondary-line, .primary-line {
 	border-style: solid;
