@@ -6,6 +6,14 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    return render_template("index.html")
+
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+@app.route("/templates/learn.html")
+def learn():
     letter = Question.get_random_letter()
     question = Question(letter)
     return render_template("learn.html", question=question)
