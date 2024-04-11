@@ -2,26 +2,31 @@
     "a": {
         "asset": "../assets/A.png",
         "description": "Make an A",
-        "button_number": "1"
+        "button_number": "1",
+        "explanation": "Touch the end of the recipient's thumb with the giver's right forefinger."
     },
     "e": {
         "asset": "../assets/E.png",
         "description": "Make an E",
-        "button_number": "2"
+        "button_number": "2",
+        "explanation": "n"
     },
     "i": {
         "asset": "../assets/I.png",
         "description": "Make an I",
-        "button_number": "3"
+        "button_number": "3",
+        "explanation": ""
     },
     "o": {
         "asset": "../assets/O.png",
         "description": "Make an O",
-        "button_number": "4"
+        "button_number": "4",
+        "explanation": ""
     },
     "u": {
         "asset": "../assets/U.png",
         "description": "Make a U",
-        "button_number": "5"
+        "button_number": "5",
+        "explanation": ""
     }
 }

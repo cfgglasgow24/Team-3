@@ -17,12 +17,12 @@ def check_answer():
     question_letter = request.form["question"]
     question = Question(question_letter)
     if int(answer_selected) == int(question.button_number):
-        message = "Correct!"
-    else:
-        message = "Wrong!"
+        message = f"Correct! Well done! Explanation: {question.explanation}"
 
-    letter = Question.get_random_letter()
-    question = Question(letter)
+        letter = Question.get_random_letter()
+        question = Question(letter)
+    else:
+        message = "Try again!"
 
     return render_template("learn.html", question=question, message=message)
 

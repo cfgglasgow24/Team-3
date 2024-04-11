@@ -15,6 +15,8 @@ class Question:
             The path to the image asset
         description: :class:`str`
             The description of the correct answer
+        explanation: :class:`str`
+            The explanation for the sign language
         """
 
         if letter == None:
@@ -31,6 +33,7 @@ class Question:
         self.button_number = questions[self.letter]["button_number"]
         self.asset = questions[self.letter]["asset"]
         self.description = questions[self.letter]["description"]
+        self.explanation = questions[self.letter]["explanation"]
     
     @classmethod
     def get_random_letter(cls) -> str:
@@ -42,7 +45,7 @@ class Question:
         return random.choice(list(questions.keys()))
 
     @classmethod
-    def add_question(cls, letter : str, button_number : int, asset : str, description : str) -> None:
+    def add_question(cls, letter : str, button_number : int, asset : str, description : str, explanation : str) -> None:
         """ A class method to add a question into the questions.json file. """
 
         with open("static/questions.json", "r", encoding="UTF-8") as f:
@@ -52,9 +55,10 @@ class Question:
             raise ValueError(f"{letter} already exists in the file.")
         
         questions[letter.lower()] = {}
-        questions[letter.lower()]["button_numbers"] = button_number
+        questions[letter.lower()]["button_number"] = button_number
         questions[letter.lower()]["asset"] = asset
         questions[letter.lower()]["description"] = description
+        questions[letter.lower()]["explanation"] = explanation
 
         with open("static/questions.json", "w", encoding="UTF-8") as f:
             json.dump(questions,f)
