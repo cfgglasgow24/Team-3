@@ -60,17 +60,15 @@
                 </section>
         </div>
 
-        <div class="main-section" id="vowels">
+        <div class="main-section" style="text-align: center;" id="vowels">
             <h2>Learn the vowels</h2>
-            <div class="primary-line"></div>
+            <div class="line"></div>
 
             <div>
                 <h3>Letter A</h3>
                 <img src="../assets/A.png" alt="Image of hand gesture for A">
                 <p>Touch the end of their thumb with your right forefinger.</p>
             </div>
-
-            <div class="secondary-line"></div>
  
             <div>
                 <h3>Letter E</h3>
@@ -78,23 +76,17 @@
                 <p>Giver uses the right forefinger to touch ring finger on the recipient’s left hand.</p>
             </div>
 
-            <div class="secondary-line"></div>
-
             <div>
                 <h3>Letter I</h3>
                 <img src="../assets/I.png" alt="Image of hand gesture for I">
                 <p>Giver uses right forefinger to touch middle finger of recipient’s left hand.</p>
             </div>
 
-            <div class="secondary-line"></div>
-
             <div>
                 <h3>Letter U</h3>
                 <img src="../assets/U.png" alt="Image of hand gesture for U">
                 <p>Giver’s right forefinger touches the recipient’s small finger.</p>
             </div>
-        
-            <div class="secondary-line"></div>
 
             <div>
                 <h3>Letter O</h3>
@@ -102,17 +94,14 @@
                 <p>Giver uses the right forefinger to touch ring finger on the recipient’s left hand.</p>
             </div>
 
-            <div class="secondary-line"></div>
-
             <div>
                 <h3>Letter U</h3>
                 <img src="../assets/U.png" alt="Image of hand gesture for U">
                 <p>Giver’s right forefinger touches the recipient’s small finger.</p>
             </div>
 
-
         <h2 id="alphabet">Learn the alphabet</h2>
-
+        <div class="line"></div>
         <div>
             <h3>Letter A</h3>
             <img src="../assets/A.png" alt="Image of hand gesture for A">
@@ -122,26 +111,29 @@
         <p>...</p>
 
         <h2 id="test">Try it yourself</h2>
-        <div class="primary-line"></div>
 
-        
-        <h1>Answer the Question!</h1>
-        <img src="../{{ question.asset }}" alt="Question Image">
+        <div class="form-section">
+            <h3>Answer the Question!</h3>
+        <!-- <img src="{{ question.asset }}" alt="Question Image" width="500px" height="auto"> -->
+
         <p>{{ question.description }}</p>
+
         <form action="/check_answer" method="POST">
-            <button type="submit" name="answer" value="1">Button 1</button>
-            <button type="submit" name="answer" value="2">Button 2</button>
-            <button type="submit" name="answer" value="3">Button 3</button>
-            <button type="submit" name="answer" value="4">Button 4</button>
-            <button type="submit" name="answer" value="5">Button 5</button>
             <input type="hidden" name="question" value="{{ question.letter }}">
+            <button type="submit" name="answer" value="1">Thumb</button>
+            <button type="submit" name="answer" value="2">Index</button>
+            <button type="submit" name="answer" value="3">Middle</button>
+            <button type="submit" name="answer" value="4">Ring</button>
+            <button type="submit" name="answer" value="5">Little</button>
         </form>
         <p>{{ message }}</p>
+    </div>
 
     </div>
 
+
     <footer>
-        <p>Code for Good <a href="#">Team 3</a></p>
+        <p>© Code for Good <a href="https://github.com/cfgglasgow24/Team-3/tree/main" target="_blank">Team 3</a></p>
     </footer>
 
     </body>
