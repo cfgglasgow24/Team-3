@@ -3,7 +3,7 @@
     <head>
         <title>Deafblind Scotland| Options</title>
         <link rel="icon" href="assets/favicon.ico" type="image/ico" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
 
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, height=device-height" />
@@ -66,7 +66,7 @@
 
             <div>
                 <h3>Letter A</h3>
-                <img src="assets/A.png" alt="Image of hand gesture for A">
+                <img src="../assets/A.png" alt="Image of hand gesture for A">
                 <p>Touch the end of their thumb with your right forefinger.</p>
             </div>
 
@@ -125,29 +125,18 @@
         <div class="primary-line"></div>
 
         
-            <h3>Question</h3>
-            <p>What letter is this?</p>
-            <img src="assets/A.png" alt="Letter A Preview">
-
-            <form>
-                <h1>Figer</h1>
-                <label class="container">Index
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-                </label>
-                <label class="container">2
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                </label>
-                <label class="container">Three
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                </label>
-                <label class="container">Four
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                </label>
-            </form>
+        <h1>Answer the Question!</h1>
+        <img src="{{ question.asset }}" alt="Question Image">
+        <p>{{ question.description }}</p>
+        <form action="/check_answer" method="POST">
+            <button type="submit" name="answer" value="1">Button 1</button>
+            <button type="submit" name="answer" value="2">Button 2</button>
+            <button type="submit" name="answer" value="3">Button 3</button>
+            <button type="submit" name="answer" value="4">Button 4</button>
+            <button type="submit" name="answer" value="5">Button 5</button>
+            <input type="hidden" name="question" value="{{ question.letter }}">
+        </form>
+        <p>{{ message }}</p>
 
     </div>
 

@@ -1,0 +1,27 @@
+{
+    "a": {
+        "asset": "../assets/A.png",
+        "description": "Make an A",
+        "button_number": "1"
+    },
+    "e": {
+        "asset": "../assets/E.png",
+        "description": "Make an E",
+        "button_number": "2"
+    },
+    "i": {
+        "asset": "../assets/I.png",
+        "description": "Make an I",
+        "button_number": "3"
+    },
+    "o": {
+        "asset": "../assets/O.png",
+        "description": "Make an O",
+        "button_number": "4"
+    },
+    "u": {
+        "asset": "../assets/U.png",
+        "description": "Make a U",
+        "button_number": "5"
+    }
+}
