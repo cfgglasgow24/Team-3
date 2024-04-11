@@ -1,0 +1,153 @@
+body {
+    background-color: #fafafa;
+    margin: 0em;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, body, p, a {
+	font-family: "Arial", sans-serif;
+	color: #000;
+}
+
+.top-section, .main-section {
+    padding: 1em;
+}
+.top-section {
+    background-color: #fafafa;
+}
+
+.main-section {
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 2em;
+}
+
+h2, h3, p, .top-section a{
+    font-size: 2em;
+}
+
+form {
+    padding: 1em;
+    border-radius: 50%;
+}
+.secondary-line, .primary-line {
+	border-style: solid;
+	border-width: 0.25px;
+	margin: 0;
+	border-radius: 10px;
+}
+
+.secondary-line { border-color: #bcbcbc; }
+.primary-line { border-color: rgb(76, 76, 76); }
+
+
+.design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+  
+  .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timeline-content {
+
+ 
+    border-radius: 5px;
+    color: white;
+    height: 10em;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    margin: 1rem;
+    margin-bottom: 20px;
+    border-radius: 6px;
+  }
+  
+  .timeline-component {
+    margin: -10px 20px 20px 20px;
+  }
+  a{ 
+    text-decoration: none;
+  }
+
+  .top-section a {
+    font-size: 2em;
+  }
+
+  .right-responsive {
+    text-align: left;
+  }
+
+  
+  @media screen and (min-width: 768px) {
+    .top-section, .main-section {
+        padding: 2em;
+    }
+
+    .right-responsive {
+        text-align: right;
+      }
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+    }
+    .timeline-middle {
+      position: relative;
+      background-color: black;
+      width: 3px;
+    }
+    .main-middle {
+      opacity: 0;
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+background-color: red;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
+  .main-section {
+    text-align: center;
+  }
+
+  footer a, footer p {
+	font-weight: 400;
+	font-size: 12px;
+}
+footer {
+    padding: 1em;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
