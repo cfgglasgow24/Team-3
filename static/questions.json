@@ -9,24 +9,24 @@
         "asset": "../assets/E.png",
         "description": "Make an E",
         "button_number": "2",
-        "explanation": "n"
+        "explanation": "Touch the end of the recipient's forefinger with the giver's right forefinger."
     },
     "i": {
         "asset": "../assets/I.png",
         "description": "Make an I",
         "button_number": "3",
-        "explanation": ""
+        "explanation": "Giver uses right forefinger to touch middle finger of recipient's left hand."
     },
     "o": {
         "asset": "../assets/O.png",
         "description": "Make an O",
         "button_number": "4",
-        "explanation": ""
+        "explanation": "Giver uses the right forefinger to touch ring finger on the recipient's left hand."
     },
     "u": {
         "asset": "../assets/U.png",
         "description": "Make a U",
         "button_number": "5",
-        "explanation": ""
+        "explanation": "Giver's right forefinger touches the recipient's small finger."
     }
 }
