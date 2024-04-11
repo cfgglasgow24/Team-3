@@ -1,5 +1,13 @@
+:root {
+    --primary: #000;
+    --secondary: #3c3c3c;
+    --accent: #c70000;
+    --background-primary: #fafafa;
+    --background-secondary: #fff;
+}
+
 body {
-    background-color: #fafafa;
+    background-color: var(--background-primary);
     margin: 0em;
 }
 
@@ -9,18 +17,52 @@ body {
 
 h1, h2, h3, body, p, a {
 	font-family: "Arial", sans-serif;
-	color: #000;
+	color: var(--primary);
 }
 
 .top-section, .main-section {
-    padding: 1em;
+    padding: 2em;
 }
-.top-section {
-    background-color: #fafafa;
+.top-section{ 
+    background-color: var(--background-primary);
 }
 
-.main-section {
-    background-color: #fff;
+.main-section{ 
+    background-color: var(--background-secondary);
+}
+
+.link-section {
+    position: fixed;
+    bottom: 4em;
+    right: 2em;
+}
+
+a {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+
+
+.link-section a {
+    border: solid;
+    background-color: var(--accent);
+    border-color: var(--accent);
+    padding: 0.5em 2em 0.5em 2em;
+    color: var(--background-primary);
+    border-radius: 10em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.link-section a:hover {
+    background-color: white;
+    color: var(--accent);
+}
+
+.main-section img {
+    height: 300px;
+    width: auto;
 }
 
 h1 {
@@ -30,43 +72,53 @@ h1 {
 
 h2 {
     margin-top: 2em;
+    text-transform: uppercase;
 }
 
-h2, h3, p, .top-section a{
+h2, h3 {
     font-size: 2em;
+    margin-top: 4em;
 }
 
-form {
-    padding: 1em;
-    border-radius: 50%;
+p, li {
+    font-size: 1.5em;
 }
-.secondary-line, .primary-line {
+
+li {
+    text-align: left;
+}
+
+
+.line, .form-section{
 	border-style: solid;
-	border-width: 0.25px;
-	margin: 0;
-	border-radius: 10px;
+    border-color: slategray;
+	border-width: 1px;
 }
 
-.secondary-line { border-color: #bcbcbc; }
-.primary-line { border-color: rgb(76, 76, 76); }
+.line {
+    margin: 0;
+}
 
+.form-section {
+    padding: 4em;
+    border-width: 2px;
+}
 
+/* Timeline taken from codepen and modified */
 .design-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
-  }
+}
   
-  .design {
+.design {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
   
-  .timeline {
+.timeline {
     width: 80%;
     height: auto;
     max-width: 800px;
@@ -75,18 +127,12 @@ form {
     flex-direction: column;
   }
   
-  .timeline-content {
-
- 
-    border-radius: 5px;
-    color: white;
+.timeline-content {
     height: 10em;
-    transition: 0.4s ease;
     overflow-wrap: break-word !important;
     margin: 1rem;
     margin-bottom: 20px;
-    border-radius: 6px;
-  }
+}
   
   .timeline-component {
     margin: -10px 20px 20px 20px;
@@ -103,10 +149,10 @@ form {
     text-align: left;
   }
 
-  
+  /* Large screen only */
   @media screen and (min-width: 768px) {
     .top-section, .main-section {
-        padding: 2em;
+        padding: 3em;
     }
 
     .right-responsive {
@@ -118,8 +164,8 @@ form {
     }
     .timeline-middle {
       position: relative;
-      background-color: black;
-      width: 3px;
+      background-color: var(--secondary);
+      width: 2px;
     }
     .main-middle {
       opacity: 0;
@@ -131,23 +177,20 @@ form {
       width: 15px;
       height: 15px;
       border-radius: 50%;
-background-color: red;
+      background-color: var(--accent);
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
     }
   }
-  .main-section {
-    text-align: center;
-  }
 
-  footer a, footer p {
-	font-weight: 400;
-	font-size: 12px;
-}
 footer {
     padding: 1em;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	text-align: center;
+	text-align: center
+}
+
+footer a, footer p {
+    font-size: 1em;
 }
