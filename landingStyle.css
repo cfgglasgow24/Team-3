@@ -7,14 +7,22 @@
 .sizeButton{
     height: 75px;
     width: 250px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Arial", sans-serif;
     font-weight: bold;
     font-size: medium;
 }
 
+.returnButton{
+    height: 50px;
+    width: 200px;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    align-items: center;
+}
+
 .landingPageButtons{
     display: flex;
-
 }
 
 
