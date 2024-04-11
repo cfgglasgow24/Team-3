@@ -1,13 +1,14 @@
+
 :root {
-    --primary: #000;
-    --secondary: #3c3c3c;
+    --dark-primary: #000;
+    --dark-secondary: #3c3c3c;
     --accent: #c70000;
-    --background-primary: #fafafa;
-    --background-secondary: #fff;
+    --light-primary: #fff;
+    --light-secondary: #c4c4c4;
 }
 
 body {
-    background-color: var(--background-primary);
+    background-color: var(--light-primary);
     margin: 0em;
 }
 
@@ -17,18 +18,29 @@ body {
 
 h1, h2, h3, body, p, a {
 	font-family: "Arial", sans-serif;
-	color: var(--primary);
+	color: var(--dark-primary);
+}
+
+.top-section h2 {
+    margin-top: 0
 }
 
 .top-section, .main-section {
     padding: 2em;
 }
+.top-section h1, .top-section h2, .top-section p {
+    color: var(--light-primary);
+}
+
+.top-section a {
+    color: var(--accent);
+}
 .top-section{ 
-    background-color: var(--background-primary);
+    background-color: var(--dark-primary);
 }
 
 .main-section{ 
-    background-color: var(--background-secondary);
+    background-color: var(--light-primary);
 }
 
 .link-section {
@@ -49,7 +61,7 @@ a {
     background-color: var(--accent);
     border-color: var(--accent);
     padding: 0.5em 2em 0.5em 2em;
-    color: var(--background-primary);
+    color: var(--light-primary);
     border-radius: 10em;
     font-size: 2em;
     font-weight: bold;
@@ -72,7 +84,6 @@ h1 {
 
 h2 {
     margin-top: 2em;
-    text-transform: uppercase;
 }
 
 h2, h3 {
@@ -89,9 +100,9 @@ li {
 }
 
 
-.line, .form-section{
+.line {
 	border-style: solid;
-    border-color: slategray;
+    border-color: var(--light-secondary);
 	border-width: 1px;
 }
 
@@ -164,8 +175,9 @@ li {
     }
     .timeline-middle {
       position: relative;
-      background-color: var(--secondary);
-      width: 2px;
+      background-color: var(--light-primary);
+      border-style: dashed;
+      border-width: 2px;
     }
     .main-middle {
       opacity: 0;
@@ -176,7 +188,9 @@ li {
       left: 50%;
       width: 15px;
       height: 15px;
+      fill:var(--light-primary);
       border-radius: 50%;
+      border: solid;
       background-color: var(--accent);
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
@@ -188,9 +202,18 @@ footer {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	text-align: center
+	text-align: center;
+    background-color: var(--dark-primary);
 }
 
 footer a, footer p {
     font-size: 1em;
+}
+
+footer a{
+    color:var(--accent)
+}
+
+footer p {
+    color:var(--light-primary)
 }
